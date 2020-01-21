@@ -19,6 +19,7 @@ function createWindow() {
   win.on('closed', () => {
     win = null;
   });
+  win.webContents.openDevTools();
 }
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
